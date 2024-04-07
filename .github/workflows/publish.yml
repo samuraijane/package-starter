@@ -30,4 +30,4 @@ jobs:
           publish: pnpm run build  # then runs the build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.<SOME_NPM_TOKEN> }}
+          NPM_TOKEN: ${{ secrets.<DAVID> }}
