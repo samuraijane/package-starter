@@ -1,11 +1,11 @@
 {
-  "name": "@samuraijane/charcount",
+  "name": "@samuraijane/my-yet-to-be-named-package",
   "version": "0.0.1",
-  "description": "Count the characters in a string.",
+  "description": "Some description that is to be determined.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "comp": "webpack serve --mode development",
+    "pkg": "webpack serve --mode development",
     "build": "tsup",
     "lint": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

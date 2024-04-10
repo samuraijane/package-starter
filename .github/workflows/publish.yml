@@ -13,13 +13,13 @@ jobs:
         contents: write
         pull-requests: write
     steps:
-      - uses: actions/checkout@v3  # checks out the repository
-      - uses: pnpm/action-setup@v2  # sets up pnpm
+      - uses: actions/checkout@v4  # checks out the repository
+      - uses: pnpm/action-setup@v3  # sets up pnpm
         with:
           version: 7
-      - uses: actions/setup-node@v3  # sets up node
+      - uses: actions/setup-node@v4  # sets up node
         with:
-          node-version: 16.x
+          node-version: 20.x
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile  # install with a frozen lockfile
@@ -30,4 +30,4 @@ jobs:
           publish: pnpm run build  # then runs the build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.<SOME_NPM_TOKEN> }}
+          NPM_TOKEN: ${{ secrets.ADD_TOKEN_HERE_THIS_ONE_WONT_WORK }}

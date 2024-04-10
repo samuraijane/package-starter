@@ -1,22 +1,8 @@
-# @samuraijane/charcount
-A simple utility to ensure that you do not write a git commit message that exceeds 72 characters.
+# package-starter
+Boilerplate to build a package that can be hosted in a registry, such as NPM.
 
-## Installation
-```bash
-npm i @samuraijane/charcount
-```
+## GitHub workflows
+For GitHub to work as expected, you will need to define a token at NPM and add it to **publish.yml** as the value for `NPM_TOKEN`.
 
-## Peer dependencies
-- react
-- react-dom
-- styled-components
-
-## Import to your react app
-```javascript
-import { Charcount } from "@samuraijane/charcount";
-```
-
-## Render
-```jsx
-<Charcount />
-```
+## pnpm
+This project uses `pnpm`. Its syntax is very similar to `npm` but there are some differences. More to follow...

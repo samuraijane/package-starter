@@ -1,29 +1,12 @@
-import React, { ChangeEvent, useState } from "react";
-import { Div } from "./style";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { App } from "./app";
 
-const Charcounter = () => {
-  const [count, setCount] = useState(0);
-  const [inputValue, setInputValue] = useState("");
+const container: HTMLElement | null = document.getElementById("root");
+const root = container && createRoot(container);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    const { length } = value;
-    if (length > 72) {
-      return false;
-    }
-    setInputValue(value);
-    setCount(value.length);
-  };
-
-  const className = `${count > 0 ? "active" : ""}${inputValue.length === 72 ? " at-max" : ""}`;
-
-  return (
-    <Div>
-      <div className="title">Character Counter</div>
-      <input onChange={handleChange} type="text" value={inputValue} />
-      <span className={className}>{count > 0 && count}</span>
-    </Div>
-  )
-};
-
-export { Charcounter };
+root?.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
